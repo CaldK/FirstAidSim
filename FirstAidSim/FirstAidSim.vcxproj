@@ -66,10 +66,12 @@
   <ItemGroup>
     <ClInclude Include="FirstAidSimulation.h" />
     <ClInclude Include="SimData.h" />
+    <ClInclude Include="SimRandom.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FirstAidSimulation.cpp" />
     <ClCompile Include="SimData.cpp" />
+    <ClCompile Include="SimRandom.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
