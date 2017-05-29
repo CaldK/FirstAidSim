@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "SimData.h"
 
 using namespace std;
 
@@ -19,11 +20,10 @@ public:
 
 	static const int DEBUG_MODE = 1;
 
-	vector<int> population;
-	vector<vector<int>> distanceMatrix;
 
 private:
 	string simulationDataFile;
+	SimData* SimDataPtr;
 };
 
 inline void FirstAidSimulation::setSimulationDataFile(const string& simulationDataFile){

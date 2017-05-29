@@ -34,6 +34,7 @@ int main(){
 FirstAidSimulation::FirstAidSimulation(){
 	//Konstruktor
 	this->simulationDataFile = "";
+	this->SimDataPtr = SimData::getInstance();
 }
 
 FirstAidSimulation::~FirstAidSimulation(){
@@ -52,8 +53,8 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 			getline(currFile, currLine);
 			if (currLine != ""){
 				this->parseLine(currLine, population, distance);
-				this->population.push_back(population);
-				this->distanceMatrix.push_back(distance);
+				this->SimDataPtr->addPopulation(population);
+				this->SimDataPtr->addDistance(distance);
 			}
 		}
 	}
