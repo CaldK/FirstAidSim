@@ -22,20 +22,30 @@ private:
 
 inline int SimRandom::getNextEmergencyTime(){
 	auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
-	auto rand = bind(exponential_distribution<int>(1/50.f), mt19937(seed));
-	return rand();
+	mt19937 generator(seed);
+	exponential_distribution<double> distribution(1 / 50.f);
+	return distribution(generator);
 }
 
 inline int SimRandom::getNextEmergencyDistrict(vector<int> population){
+	int i = 0;
 	auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
-	auto rand = bind(discrete_distribution<int>(population.begin(),population.end()),mt19937(seed));
-	return rand();
+	mt19937 generator(seed);
+	discrete_distribution<int> distribution(population.size(),
+		0.0, // dummy!
+		1.0, // dummy!
+		[&population, &i](double)
+	{
+		return population[i++];
+	});
+	return distribution(generator);
 }
 
 inline int SimRandom::getActualTravelTime(int time){
 	auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
-	auto rand = bind(uniform_int_distribution<int>(time*0.5,time*1.5), mt19937(seed));
-	return rand();
+	mt19937 generator(seed);
+	uniform_int_distribution<int> distribution(time*0.5, time*1.5);
+	return distribution(generator);
 }
 
 inline int SimRandom::getCareDuration(bool urgentEmergency){
@@ -47,8 +57,9 @@ inline int SimRandom::getCareDuration(bool urgentEmergency){
 		a = 10; b = 20;
 	}
 	auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
-	auto rand = bind(uniform_int_distribution<int>(a,b), mt19937(seed));
-	return rand();
+	mt19937 generator(seed);
+	uniform_int_distribution<int>distribution(a, b);
+	return distribution(generator);
 }
 
 

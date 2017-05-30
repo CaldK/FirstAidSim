@@ -1,5 +1,6 @@
 #include <fstream>
 #include "FirstAidSimulation.h"
+#include "SimRandom.h"
 #include <iostream>
 #include <string>
 
@@ -86,4 +87,16 @@ void FirstAidSimulation::runSimulation(){
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
+
+	vector<int> dist;
+	dist.push_back(1);
+	dist.push_back(2);
+	dist.push_back(3);
+	dist.push_back(4);
+
+	cout << "Random 1: " << SimRandom::getNextEmergencyTime() << endl;
+	cout << "Random 2: " << SimRandom::getNextEmergencyDistrict(dist) << endl;
+	cout << "Random 3: " << SimRandom::getCareDuration(true) << endl;
+	cout << "Random 4: " << SimRandom::getActualTravelTime(5) << endl;
+
 }
