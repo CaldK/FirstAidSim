@@ -1,6 +1,7 @@
 #include <fstream>
 #include "FirstAidSimulation.h"
 #include "SimRandom.h"
+#include "SimTime.h"
 #include <iostream>
 #include <string>
 
@@ -38,6 +39,7 @@ FirstAidSimulation::FirstAidSimulation(){
 	//Konstruktor
 	this->simulationDataFile = "";
 	this->SimDataPtr = SimData::getInstance();
+	this->SimTimePtr = SimTime::getInstance();
 }
 
 FirstAidSimulation::~FirstAidSimulation(){
@@ -68,7 +70,7 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 		}
 	}
 	else{
-		throw exception("iftream operation failed!");
+		throw exception("ifstream operation failed!");
 	}
 }
 
@@ -98,4 +100,5 @@ void FirstAidSimulation::runSimulation(){
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
+	SimRandom::setUpDiscreteDist(this->SimDataPtr->getPopulationList());
 }

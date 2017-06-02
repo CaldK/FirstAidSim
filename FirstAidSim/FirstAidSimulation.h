@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "SimData.h"
+#include "SimTime.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ public:
 private:
 	string simulationDataFile;
 	SimData* SimDataPtr;
+	SimTime* SimTimePtr;
 };
 
 inline void FirstAidSimulation::setSimulationDataFile(const string& simulationDataFile){
