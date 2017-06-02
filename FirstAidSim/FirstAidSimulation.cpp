@@ -49,7 +49,13 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 
 	ifstream currFile(this->simulationDataFile.c_str(), ios::in);
 	if (currFile){
+		getline(currFile, currLine); //Simulation Duration(min):
 		getline(currFile, currLine);
+		this->SimDataPtr->setSimDuration(atoi(currLine.c_str()));
+		getline(currFile, currLine); //Urgent Emergency Ratio(0.0-1.0):
+		getline(currFile, currLine);
+		SimRandom::setUrgentRatio(atof(currLine.c_str()));
+		getline(currFile, currLine); //Population - Travel Time Matrix:
 		while (!currFile.eof()){
 			int population;
 			vector<int> distance;
@@ -60,6 +66,9 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 				this->SimDataPtr->addDistance(distance);
 			}
 		}
+	}
+	else{
+		throw exception("iftream operation failed!");
 	}
 }
 
@@ -89,5 +98,4 @@ void FirstAidSimulation::runSimulation(){
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
-
 }
