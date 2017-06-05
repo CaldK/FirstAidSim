@@ -27,6 +27,12 @@
     <ClInclude Include="SimTime.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="EmergencyList.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Emergency.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FirstAidSimulation.cpp">
@@ -39,6 +45,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SimTime.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="EmergencyList.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Emergency.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

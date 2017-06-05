@@ -64,12 +64,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Emergency.h" />
+    <ClInclude Include="EmergencyList.h" />
     <ClInclude Include="FirstAidSimulation.h" />
     <ClInclude Include="SimData.h" />
     <ClInclude Include="SimRandom.h" />
     <ClInclude Include="SimTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Emergency.cpp" />
+    <ClCompile Include="EmergencyList.cpp" />
     <ClCompile Include="FirstAidSimulation.cpp" />
     <ClCompile Include="SimData.cpp" />
     <ClCompile Include="SimRandom.cpp" />
