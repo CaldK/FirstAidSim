@@ -96,9 +96,20 @@ void FirstAidSimulation::parseLine(const string& currLine, int& population, vect
 }
 
 void FirstAidSimulation::runSimulation(){
+	static const int NUM_OF_RUNS = 1;
 	cout << "Running simulations..." << endl;
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
 	SimRandom::setUpDiscreteDist(this->SimDataPtr->getPopulationList());
+	static const int SIM_DURATION = this->SimDataPtr->getSimDuration();
+
+	for (int i = 0; i < NUM_OF_RUNS; i++){
+		while (true){
+			//DoNextMove
+			this->SimTimePtr->incrementTime();
+			if (this->SimTimePtr->getTime() > SIM_DURATION) break;
+		}
+	}
+
 }
