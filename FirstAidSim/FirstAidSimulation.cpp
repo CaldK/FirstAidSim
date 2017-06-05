@@ -1,6 +1,7 @@
 #include <fstream>
 #include "FirstAidSimulation.h"
 #include "SimRandom.h"
+#include "SimTime.h"
 #include <iostream>
 #include <string>
 
@@ -38,6 +39,7 @@ FirstAidSimulation::FirstAidSimulation(){
 	//Konstruktor
 	this->simulationDataFile = "";
 	this->SimDataPtr = SimData::getInstance();
+	this->SimTimePtr = SimTime::getInstance();
 }
 
 FirstAidSimulation::~FirstAidSimulation(){
@@ -49,7 +51,13 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 
 	ifstream currFile(this->simulationDataFile.c_str(), ios::in);
 	if (currFile){
+		getline(currFile, currLine); //Simulation Duration(min):
 		getline(currFile, currLine);
+		this->SimDataPtr->setSimDuration(atoi(currLine.c_str()));
+		getline(currFile, currLine); //Urgent Emergency Ratio(0.0-1.0):
+		getline(currFile, currLine);
+		SimRandom::setUrgentRatio(atof(currLine.c_str()));
+		getline(currFile, currLine); //Population - Travel Time Matrix:
 		while (!currFile.eof()){
 			int population;
 			vector<int> distance;
@@ -60,6 +68,9 @@ void FirstAidSimulation::loadSimulationDataFromFile(){
 				this->SimDataPtr->addDistance(distance);
 			}
 		}
+	}
+	else{
+		throw exception("ifstream operation failed!");
 	}
 }
 
@@ -85,9 +96,20 @@ void FirstAidSimulation::parseLine(const string& currLine, int& population, vect
 }
 
 void FirstAidSimulation::runSimulation(){
+	static const int NUM_OF_RUNS = 1;
 	cout << "Running simulations..." << endl;
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
+	SimRandom::setUpDiscreteDist(this->SimDataPtr->getPopulationList());
+	static const int SIM_DURATION = this->SimDataPtr->getSimDuration();
+
+	for (int i = 0; i < NUM_OF_RUNS; i++){
+		while (true){
+			//DoNextMove
+			this->SimTimePtr->incrementTime();
+			if (this->SimTimePtr->getTime() > SIM_DURATION) break;
+		}
+	}
 
 }
