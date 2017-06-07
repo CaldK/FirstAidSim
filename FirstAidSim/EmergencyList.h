@@ -14,6 +14,14 @@ public:
 
 	inline void addEmergency(const Emergency& Emergency);
 	inline Emergency getEmergency(const int index);
+	inline int getEmergencyListSize() const;
+
+	inline int getEmergencyStartTimeAt(const int index) const;
+	inline int getEmergencyDistrictAt(const int index) const;
+	inline int getEmergencyCareDurationAt(const int index) const;
+	inline bool getEmergencyUrgentAt(const int index) const;
+
+	inline void setEmergencyStatusAt(const int index, const Emergency::Status status);
 
 private:
 	EmergencyList();
@@ -34,5 +42,29 @@ inline void EmergencyList::addEmergency(const Emergency& Emergency){
 
 inline Emergency EmergencyList::getEmergency(const int index){
 	return emergencyList.at(index);
+}
+
+inline int EmergencyList::getEmergencyListSize() const{
+	return this->emergencyList.size();
+}
+
+inline int EmergencyList::getEmergencyStartTimeAt(const int index) const{
+	return emergencyList.at(index).getStartTime();
+}
+
+inline int EmergencyList::getEmergencyDistrictAt(const int index) const{
+	return emergencyList.at(index).getDistrict();
+}
+
+inline int EmergencyList::getEmergencyCareDurationAt(const int index) const{
+	return emergencyList.at(index).getCareDurationTime();
+}
+
+inline bool EmergencyList::getEmergencyUrgentAt(const int index) const{
+	return emergencyList.at(index).getUrgent();
+}
+
+inline void EmergencyList::setEmergencyStatusAt(const int index, const Emergency::Status status){
+	this->emergencyList.at(index).setStatus(status);
 }
 #endif

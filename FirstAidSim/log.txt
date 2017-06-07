@@ -1,0 +1,1358 @@
+-------------------------------
+Queue Emergency 0
+-------------------------------
+Time: 15
+District: 0
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 1
+-------------------------------
+Time: 36
+District: 0
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 2
+-------------------------------
+Time: 83
+District: 4
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 3
+-------------------------------
+Time: 89
+District: 4
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 4
+-------------------------------
+Time: 103
+District: 1
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 5
+-------------------------------
+Time: 113
+District: 4
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 6
+-------------------------------
+Time: 123
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 7
+-------------------------------
+Time: 135
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 8
+-------------------------------
+Time: 148
+District: 5
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 9
+-------------------------------
+Time: 214
+District: 0
+Urgent: Yes
+Care Duration Time: 48
+-------------------------------
+Queue Emergency 10
+-------------------------------
+Time: 288
+District: 4
+Urgent: Yes
+Care Duration Time: 35
+-------------------------------
+Queue Emergency 11
+-------------------------------
+Time: 381
+District: 4
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 12
+-------------------------------
+Time: 405
+District: 4
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 13
+-------------------------------
+Time: 523
+District: 1
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 14
+-------------------------------
+Time: 604
+District: 5
+Urgent: Yes
+Care Duration Time: 36
+-------------------------------
+Queue Emergency 15
+-------------------------------
+Time: 625
+District: 4
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 16
+-------------------------------
+Time: 629
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 17
+-------------------------------
+Time: 633
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 18
+-------------------------------
+Time: 667
+District: 0
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 19
+-------------------------------
+Time: 682
+District: 5
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 20
+-------------------------------
+Time: 727
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 21
+-------------------------------
+Time: 805
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 22
+-------------------------------
+Time: 884
+District: 0
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 23
+-------------------------------
+Time: 923
+District: 0
+Urgent: Yes
+Care Duration Time: 46
+-------------------------------
+Queue Emergency 24
+-------------------------------
+Time: 973
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 25
+-------------------------------
+Time: 1148
+District: 1
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 26
+-------------------------------
+Time: 1163
+District: 1
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 27
+-------------------------------
+Time: 1238
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 28
+-------------------------------
+Time: 1246
+District: 4
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 29
+-------------------------------
+Time: 1326
+District: 5
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 30
+-------------------------------
+Time: 1349
+District: 4
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 31
+-------------------------------
+Time: 1358
+District: 0
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 32
+-------------------------------
+Time: 1401
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 33
+-------------------------------
+Time: 1403
+District: 3
+Urgent: Yes
+Care Duration Time: 58
+-------------------------------
+Queue Emergency 34
+-------------------------------
+Time: 1415
+District: 4
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 35
+-------------------------------
+Time: 1418
+District: 1
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 36
+-------------------------------
+Time: 1557
+District: 4
+Urgent: Yes
+Care Duration Time: 85
+-------------------------------
+Queue Emergency 37
+-------------------------------
+Time: 1573
+District: 1
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 38
+-------------------------------
+Time: 1597
+District: 5
+Urgent: Yes
+Care Duration Time: 35
+-------------------------------
+Queue Emergency 39
+-------------------------------
+Time: 1660
+District: 1
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 40
+-------------------------------
+Time: 1666
+District: 2
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 41
+-------------------------------
+Time: 1774
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 42
+-------------------------------
+Time: 1783
+District: 5
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 43
+-------------------------------
+Time: 1783
+District: 5
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 44
+-------------------------------
+Time: 1998
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 45
+-------------------------------
+Time: 2040
+District: 0
+Urgent: Yes
+Care Duration Time: 47
+-------------------------------
+Queue Emergency 46
+-------------------------------
+Time: 2232
+District: 5
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 47
+-------------------------------
+Time: 2313
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 48
+-------------------------------
+Time: 2423
+District: 0
+Urgent: Yes
+Care Duration Time: 84
+-------------------------------
+Queue Emergency 49
+-------------------------------
+Time: 2634
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 50
+-------------------------------
+Time: 2635
+District: 4
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 51
+-------------------------------
+Time: 2849
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 52
+-------------------------------
+Time: 2856
+District: 5
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 53
+-------------------------------
+Time: 2925
+District: 0
+Urgent: Yes
+Care Duration Time: 62
+-------------------------------
+Queue Emergency 54
+-------------------------------
+Time: 2940
+District: 3
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 55
+-------------------------------
+Time: 3184
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 56
+-------------------------------
+Time: 3253
+District: 4
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 57
+-------------------------------
+Time: 3274
+District: 3
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 58
+-------------------------------
+Time: 3282
+District: 0
+Urgent: Yes
+Care Duration Time: 33
+-------------------------------
+Queue Emergency 59
+-------------------------------
+Time: 3383
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 60
+-------------------------------
+Time: 3411
+District: 0
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 61
+-------------------------------
+Time: 3428
+District: 0
+Urgent: Yes
+Care Duration Time: 64
+-------------------------------
+Queue Emergency 62
+-------------------------------
+Time: 3487
+District: 0
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 63
+-------------------------------
+Time: 3557
+District: 0
+Urgent: Yes
+Care Duration Time: 68
+-------------------------------
+Queue Emergency 64
+-------------------------------
+Time: 3700
+District: 5
+Urgent: Yes
+Care Duration Time: 65
+-------------------------------
+Queue Emergency 65
+-------------------------------
+Time: 3735
+District: 0
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 66
+-------------------------------
+Time: 3839
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 67
+-------------------------------
+Time: 3839
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 68
+-------------------------------
+Time: 3843
+District: 5
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 69
+-------------------------------
+Time: 3894
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 70
+-------------------------------
+Time: 3921
+District: 0
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 71
+-------------------------------
+Time: 3946
+District: 5
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 72
+-------------------------------
+Time: 4007
+District: 1
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 73
+-------------------------------
+Time: 4086
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 74
+-------------------------------
+Time: 4183
+District: 0
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 75
+-------------------------------
+Time: 4364
+District: 4
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 76
+-------------------------------
+Time: 4373
+District: 1
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 77
+-------------------------------
+Time: 4376
+District: 4
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 78
+-------------------------------
+Time: 4720
+District: 5
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 79
+-------------------------------
+Time: 4756
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 80
+-------------------------------
+Time: 4771
+District: 2
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 81
+-------------------------------
+Time: 4782
+District: 5
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 82
+-------------------------------
+Time: 4869
+District: 4
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 83
+-------------------------------
+Time: 4878
+District: 5
+Urgent: Yes
+Care Duration Time: 37
+-------------------------------
+Queue Emergency 84
+-------------------------------
+Time: 4923
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 85
+-------------------------------
+Time: 4974
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 86
+-------------------------------
+Time: 4999
+District: 1
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 87
+-------------------------------
+Time: 5019
+District: 4
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 88
+-------------------------------
+Time: 5111
+District: 5
+Urgent: Yes
+Care Duration Time: 88
+-------------------------------
+Queue Emergency 89
+-------------------------------
+Time: 5237
+District: 2
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 90
+-------------------------------
+Time: 5287
+District: 5
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 91
+-------------------------------
+Time: 5311
+District: 2
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 92
+-------------------------------
+Time: 5330
+District: 0
+Urgent: Yes
+Care Duration Time: 72
+-------------------------------
+Queue Emergency 93
+-------------------------------
+Time: 5386
+District: 4
+Urgent: Yes
+Care Duration Time: 76
+-------------------------------
+Queue Emergency 94
+-------------------------------
+Time: 5401
+District: 1
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 95
+-------------------------------
+Time: 5553
+District: 2
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 96
+-------------------------------
+Time: 5639
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 97
+-------------------------------
+Time: 5679
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 98
+-------------------------------
+Time: 5697
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 99
+-------------------------------
+Time: 5819
+District: 5
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 100
+-------------------------------
+Time: 5840
+District: 3
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 101
+-------------------------------
+Time: 5853
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 102
+-------------------------------
+Time: 5861
+District: 5
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 103
+-------------------------------
+Time: 5975
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 104
+-------------------------------
+Time: 6088
+District: 0
+Urgent: Yes
+Care Duration Time: 57
+-------------------------------
+Queue Emergency 105
+-------------------------------
+Time: 6120
+District: 5
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 106
+-------------------------------
+Time: 6392
+District: 2
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 107
+-------------------------------
+Time: 6412
+District: 4
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 108
+-------------------------------
+Time: 6412
+District: 5
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 109
+-------------------------------
+Time: 6525
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 110
+-------------------------------
+Time: 6608
+District: 4
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 111
+-------------------------------
+Time: 6626
+District: 5
+Urgent: Yes
+Care Duration Time: 56
+-------------------------------
+Queue Emergency 112
+-------------------------------
+Time: 6713
+District: 2
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 113
+-------------------------------
+Time: 6720
+District: 1
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 114
+-------------------------------
+Time: 6737
+District: 5
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 115
+-------------------------------
+Time: 6791
+District: 0
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 116
+-------------------------------
+Time: 6829
+District: 5
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 117
+-------------------------------
+Time: 6905
+District: 5
+Urgent: Yes
+Care Duration Time: 41
+-------------------------------
+Queue Emergency 118
+-------------------------------
+Time: 6922
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 119
+-------------------------------
+Time: 6928
+District: 4
+Urgent: Yes
+Care Duration Time: 43
+-------------------------------
+Queue Emergency 120
+-------------------------------
+Time: 6951
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 121
+-------------------------------
+Time: 7075
+District: 5
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 122
+-------------------------------
+Time: 7214
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 123
+-------------------------------
+Time: 7297
+District: 5
+Urgent: Yes
+Care Duration Time: 71
+-------------------------------
+Queue Emergency 124
+-------------------------------
+Time: 7311
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 125
+-------------------------------
+Time: 7314
+District: 5
+Urgent: Yes
+Care Duration Time: 75
+-------------------------------
+Queue Emergency 126
+-------------------------------
+Time: 7350
+District: 0
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 127
+-------------------------------
+Time: 7361
+District: 4
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 128
+-------------------------------
+Time: 7399
+District: 5
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 129
+-------------------------------
+Time: 7474
+District: 4
+Urgent: Yes
+Care Duration Time: 89
+-------------------------------
+Queue Emergency 130
+-------------------------------
+Time: 7478
+District: 0
+Urgent: Yes
+Care Duration Time: 57
+-------------------------------
+Queue Emergency 131
+-------------------------------
+Time: 7563
+District: 4
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 132
+-------------------------------
+Time: 7588
+District: 1
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 133
+-------------------------------
+Time: 7610
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 134
+-------------------------------
+Time: 7653
+District: 5
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 135
+-------------------------------
+Time: 7661
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 136
+-------------------------------
+Time: 7790
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 137
+-------------------------------
+Time: 7825
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 138
+-------------------------------
+Time: 7827
+District: 5
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 139
+-------------------------------
+Time: 7902
+District: 0
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 140
+-------------------------------
+Time: 7930
+District: 0
+Urgent: Yes
+Care Duration Time: 81
+-------------------------------
+Queue Emergency 141
+-------------------------------
+Time: 8087
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 142
+-------------------------------
+Time: 8104
+District: 4
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 143
+-------------------------------
+Time: 8122
+District: 3
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 144
+-------------------------------
+Time: 8169
+District: 1
+Urgent: No
+Care Duration Time: 10
+-------------------------------
+Queue Emergency 145
+-------------------------------
+Time: 8181
+District: 4
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 146
+-------------------------------
+Time: 8193
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 147
+-------------------------------
+Time: 8290
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 148
+-------------------------------
+Time: 8303
+District: 1
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 149
+-------------------------------
+Time: 8361
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 150
+-------------------------------
+Time: 8444
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 151
+-------------------------------
+Time: 8453
+District: 0
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 152
+-------------------------------
+Time: 8521
+District: 5
+Urgent: Yes
+Care Duration Time: 85
+-------------------------------
+Queue Emergency 153
+-------------------------------
+Time: 8567
+District: 0
+Urgent: Yes
+Care Duration Time: 58
+-------------------------------
+Queue Emergency 154
+-------------------------------
+Time: 8631
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 155
+-------------------------------
+Time: 8641
+District: 2
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 156
+-------------------------------
+Time: 8725
+District: 1
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 157
+-------------------------------
+Time: 8781
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 158
+-------------------------------
+Time: 8795
+District: 5
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 159
+-------------------------------
+Time: 8820
+District: 5
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 160
+-------------------------------
+Time: 8858
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 161
+-------------------------------
+Time: 8883
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 162
+-------------------------------
+Time: 8915
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 163
+-------------------------------
+Time: 8928
+District: 5
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 164
+-------------------------------
+Time: 9029
+District: 5
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 165
+-------------------------------
+Time: 9045
+District: 5
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 166
+-------------------------------
+Time: 9127
+District: 1
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 167
+-------------------------------
+Time: 9139
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 168
+-------------------------------
+Time: 9151
+District: 2
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 169
+-------------------------------
+Time: 9160
+District: 1
+Urgent: No
+Care Duration Time: 12
+-------------------------------
+Queue Emergency 170
+-------------------------------
+Time: 9195
+District: 5
+Urgent: No
+Care Duration Time: 13
+-------------------------------
+Queue Emergency 171
+-------------------------------
+Time: 9238
+District: 0
+Urgent: No
+Care Duration Time: 18
+-------------------------------
+Queue Emergency 172
+-------------------------------
+Time: 9329
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 173
+-------------------------------
+Time: 9331
+District: 0
+Urgent: Yes
+Care Duration Time: 49
+-------------------------------
+Queue Emergency 174
+-------------------------------
+Time: 9384
+District: 3
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 175
+-------------------------------
+Time: 9460
+District: 0
+Urgent: Yes
+Care Duration Time: 61
+-------------------------------
+Queue Emergency 176
+-------------------------------
+Time: 9480
+District: 0
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 177
+-------------------------------
+Time: 9513
+District: 5
+Urgent: No
+Care Duration Time: 16
+-------------------------------
+Queue Emergency 178
+-------------------------------
+Time: 9532
+District: 5
+Urgent: Yes
+Care Duration Time: 50
+-------------------------------
+Queue Emergency 179
+-------------------------------
+Time: 9538
+District: 0
+Urgent: No
+Care Duration Time: 14
+-------------------------------
+Queue Emergency 180
+-------------------------------
+Time: 9549
+District: 4
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 181
+-------------------------------
+Time: 9557
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 182
+-------------------------------
+Time: 9566
+District: 5
+Urgent: Yes
+Care Duration Time: 57
+-------------------------------
+Queue Emergency 183
+-------------------------------
+Time: 9578
+District: 2
+Urgent: No
+Care Duration Time: 20
+-------------------------------
+Queue Emergency 184
+-------------------------------
+Time: 9622
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 185
+-------------------------------
+Time: 9650
+District: 4
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 186
+-------------------------------
+Time: 9720
+District: 5
+Urgent: Yes
+Care Duration Time: 40
+-------------------------------
+Queue Emergency 187
+-------------------------------
+Time: 9722
+District: 2
+Urgent: Yes
+Care Duration Time: 60
+-------------------------------
+Queue Emergency 188
+-------------------------------
+Time: 9737
+District: 0
+Urgent: Yes
+Care Duration Time: 70
+-------------------------------
+Queue Emergency 189
+-------------------------------
+Time: 9766
+District: 0
+Urgent: No
+Care Duration Time: 15
+-------------------------------
+Queue Emergency 190
+-------------------------------
+Time: 9779
+District: 0
+Urgent: No
+Care Duration Time: 19
+-------------------------------
+Queue Emergency 191
+-------------------------------
+Time: 9833
+District: 0
+Urgent: No
+Care Duration Time: 17
+-------------------------------
+Queue Emergency 192
+-------------------------------
+Time: 9888
+District: 0
+Urgent: No
+Care Duration Time: 11
+-------------------------------
+Queue Emergency 193
+-------------------------------
+Time: 10064
+District: 5
+Urgent: No
+Care Duration Time: 14

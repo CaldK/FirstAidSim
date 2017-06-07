@@ -3,9 +3,12 @@
 #include "SimRandom.h"
 #include "SimTime.h"
 #include <iostream>
+#include <fstream>
 #include <string>
 
 #include <map>
+
+int FirstAidSimulation::SIM_DURATION = 10080;
 
 int main(){
 	try {
@@ -40,6 +43,7 @@ FirstAidSimulation::FirstAidSimulation(){
 	this->simulationDataFile = "";
 	this->SimDataPtr = SimData::getInstance();
 	this->SimTimePtr = SimTime::getInstance();
+	this->EmergencyListPtr = EmergencyList::getInstance();
 }
 
 FirstAidSimulation::~FirstAidSimulation(){
@@ -95,6 +99,56 @@ void FirstAidSimulation::parseLine(const string& currLine, int& population, vect
 	distance.push_back(atoi(distanceStr.c_str()));
 }
 
+void FirstAidSimulation::generateEmergencies(){
+	int time = 0;
+	int index = 0;
+	ofstream myfile;
+	myfile.open("log.txt");
+	time += SimRandom::getNextEmergencyTime();
+	while (time < SIM_DURATION){
+		Emergency emergency;
+		emergency.setStartTime(time);
+		emergency.setDistrict(SimRandom::getNextEmergencyDistrict());
+		if (SimRandom::isEmergencyUrgent()){
+			emergency.setUrgent(true);
+			int durationTime = SimRandom::getCareDuration(true);
+			emergency.setCareDurationTime(durationTime);
+		}
+		else{
+			emergency.setUrgent(false);
+			int durationTime = SimRandom::getCareDuration(false);
+			emergency.setCareDurationTime(durationTime);
+		}
+		this->EmergencyListPtr->addEmergency(emergency);
+		if (DEBUG_MODE){
+			myfile << "-------------------------------" << endl;
+			myfile << "Queue Emergency " << index << endl;
+			myfile << "-------------------------------" << endl;
+			myfile << "Time: " << time << endl;
+			myfile << "District: " << this->EmergencyListPtr->getEmergencyDistrictAt(index) << endl;
+			myfile << "Urgent: ";
+			if (this->EmergencyListPtr->getEmergencyUrgentAt(index)) myfile << "Yes" << endl;
+			else myfile << "No" << endl;
+			myfile << "Care Duration Time: " << this->EmergencyListPtr->getEmergencyCareDurationAt(index) << endl;
+		}
+		
+		index++;
+		time += SimRandom::getNextEmergencyTime();
+	}
+	myfile.close();
+}
+
+void FirstAidSimulation::queueEmergencies(){
+	int time = this->SimTimePtr->getTime();
+	int numEmergencies = this->EmergencyListPtr->getEmergencyListSize();
+	for (int index = 0; index < numEmergencies; ++index){
+		Emergency emergency = this->EmergencyListPtr->getEmergency(index);
+		if (time == emergency.getStartTime()){
+			this->EmergencyListPtr->setEmergencyStatusAt(index, Emergency::QUEUED_WAITING);
+		}
+	}
+}
+
 void FirstAidSimulation::runSimulation(){
 	static const int NUM_OF_RUNS = 1;
 	cout << "Running simulations..." << endl;
@@ -102,11 +156,14 @@ void FirstAidSimulation::runSimulation(){
 	this->setSimulationDataFile(data);
 	this->loadSimulationDataFromFile();
 	SimRandom::setUpDiscreteDist(this->SimDataPtr->getPopulationList());
-	static const int SIM_DURATION = this->SimDataPtr->getSimDuration();
+
+	SIM_DURATION = this->SimDataPtr->getSimDuration();
 
 	for (int i = 0; i < NUM_OF_RUNS; i++){
+		generateEmergencies();
 		while (true){
 			//DoNextMove
+			queueEmergencies();
 			this->SimTimePtr->incrementTime();
 			if (this->SimTimePtr->getTime() > SIM_DURATION) break;
 		}
