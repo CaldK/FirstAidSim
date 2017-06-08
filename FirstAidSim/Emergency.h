@@ -15,12 +15,16 @@ public:
 	inline bool getUrgent() const;
 	inline Emergency::Status getStatus() const;
 	inline int getCareDurationTime() const;
+	inline int getDoctorArrivalTime() const;
+	inline int getCompletionTime() const;
 
 	inline void setStartTime(const int startTime);
 	inline void setDistrict(const int district);
 	inline void setUrgent(const bool urgent);
 	inline void setStatus(const Emergency::Status status);
 	inline void setCareDurationTime(const int careDurationTime);
+	inline void setDoctorArrivalTime(const int arrivalTime);
+	inline void setCompletionTime(const int completionTime);
 	
 	enum Status{
 		NOT_SET = -1,
@@ -37,6 +41,8 @@ private:
 	bool urgent;
 	Status status;
 	int careDurationTime;
+	int doctorArrivalTime;
+	int completionTime;
 };
 
 inline int Emergency::getStartTime() const{
@@ -56,6 +62,13 @@ inline int Emergency::getCareDurationTime() const{
 	return this->careDurationTime;
 }
 
+inline int Emergency::getDoctorArrivalTime() const{
+	return this->doctorArrivalTime;
+}
+inline int Emergency::getCompletionTime() const{
+	return this->completionTime;
+}
+
 inline void Emergency::setStartTime(const int startTime){
 	this->startTime = startTime;
 }
@@ -72,5 +85,12 @@ inline void Emergency::setCareDurationTime(const int careDurationTime){
 	this->careDurationTime = careDurationTime;
 }
 
+inline void Emergency::setDoctorArrivalTime(const int arrivalTime){
+	this->doctorArrivalTime = arrivalTime;
+}
+
+inline void Emergency::setCompletionTime(const int completionTime){
+	this->completionTime = completionTime;
+}
 
 #endif
