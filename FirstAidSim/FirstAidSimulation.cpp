@@ -42,7 +42,6 @@ FirstAidSimulation::FirstAidSimulation(){
 	//Konstruktor
 	this->simulationDataFile = "";
 	this->SimDataPtr = SimData::getInstance();
-	this->SimTimePtr = SimTime::getInstance();
 	this->EmergencyListPtr = EmergencyList::getInstance();
 }
 
@@ -138,17 +137,6 @@ void FirstAidSimulation::generateEmergencies(){
 	myfile.close();
 }
 
-void FirstAidSimulation::queueEmergencies(){
-	int time = this->SimTimePtr->getTime();
-	int numEmergencies = this->EmergencyListPtr->getEmergencyListSize();
-	for (int index = 0; index < numEmergencies; ++index){
-		Emergency emergency = this->EmergencyListPtr->getEmergency(index);
-		if (time == emergency.getStartTime()){
-			this->EmergencyListPtr->setEmergencyStatusAt(index, Emergency::QUEUED_WAITING);
-		}
-	}
-}
-
 void FirstAidSimulation::runSimulation(){
 	static const int NUM_OF_RUNS = 1;
 	cout << "Running simulations..." << endl;
@@ -161,12 +149,29 @@ void FirstAidSimulation::runSimulation(){
 
 	for (int i = 0; i < NUM_OF_RUNS; i++){
 		generateEmergencies();
+		QueueStrategy qs(DistrictStrategy);
+		ofstream myfile;
+		myfile.open("log2.txt");
+		int district = 0;
 		while (true){
 			//DoNextMove
-			queueEmergencies();
-			this->SimTimePtr->incrementTime();
+			SimTime::addTime(1);
+			if (SimTime::getTime()%50==0){
+				myfile << "Time: " << SimTime::getTime() << endl;
+				int index = qs.getNextEmergency(district);
+				if (index != -1){
+					myfile << "Next Emergency: " << index << endl;
+					district = EmergencyListPtr->getEmergencyDistrictAt(index);
+					myfile << "District: " << district << endl;
+					EmergencyListPtr->setEmergencyStatusAt(index, Emergency::COMPLETED);
+					if (EmergencyListPtr->getEmergencyUrgentAt(index)) myfile << "URGENT!" << endl;
+				}
+				else myfile << "No Next Emergency!" << endl;
+				myfile << "-------------------------" << endl;
+			}
 			if (this->SimTimePtr->getTime() > SIM_DURATION) break;
 		}
+		myfile.close();
 	}
 
 }

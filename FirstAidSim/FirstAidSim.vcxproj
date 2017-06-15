@@ -67,6 +67,7 @@
     <ClInclude Include="Emergency.h" />
     <ClInclude Include="EmergencyList.h" />
     <ClInclude Include="FirstAidSimulation.h" />
+    <ClInclude Include="QueueStrategy.h" />
     <ClInclude Include="SimData.h" />
     <ClInclude Include="SimRandom.h" />
     <ClInclude Include="SimTime.h" />
@@ -75,6 +76,7 @@
     <ClCompile Include="Emergency.cpp" />
     <ClCompile Include="EmergencyList.cpp" />
     <ClCompile Include="FirstAidSimulation.cpp" />
+    <ClCompile Include="QueueStrategy.cpp" />
     <ClCompile Include="SimData.cpp" />
     <ClCompile Include="SimRandom.cpp" />
     <ClCompile Include="SimTime.cpp" />
