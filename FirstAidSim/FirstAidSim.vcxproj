@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Doctor.h" />
     <ClInclude Include="Emergency.h" />
     <ClInclude Include="EmergencyList.h" />
     <ClInclude Include="FirstAidSimulation.h" />
@@ -73,6 +74,7 @@
     <ClInclude Include="SimTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="Emergency.cpp" />
     <ClCompile Include="EmergencyList.cpp" />
     <ClCompile Include="FirstAidSimulation.cpp" />

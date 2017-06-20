@@ -49,6 +49,11 @@ FirstAidSimulation::~FirstAidSimulation(){
 	//Destruktor leer
 }
 
+void FirstAidSimulation::resetSimulation(){
+	this->EmergencyListPtr->resetEmergencyList();
+	this->SimTimePtr->setTime(0);
+}
+
 void FirstAidSimulation::loadSimulationDataFromFile(){
 	string currLine = "";
 
@@ -137,8 +142,77 @@ void FirstAidSimulation::generateEmergencies(){
 	myfile.close();
 }
 
+void FirstAidSimulation::calculateKeyFigures(){
+	double averageCompletionTime = 0;
+	double averageWaitTime = 0;
+	double averageUrgentCompletionTime = 0;
+	double averageUrgentWaitTime = 0;
+	int currentTimeOfCompletion = 0;
+	int currentWaitTime = 0;
+	int currentCompletionTime = 0;
+	int currentStartTime = 0;
+	int currentArrivalTime = 0;
+	int cumulativeWaitTime = 0;
+	int cumulativeCompletionTime = 0;
+	int cumulativeUrgentWaitTime = 0;
+	int cumulativeUrgentCompletionTime = 0;
+	int numNormalEmergencies = 0;
+	int numUrgentEmergencies = 0;
+
+	int numEmergencies = this->EmergencyListPtr->getEmergencyListSize();
+
+	for (int index = 0; index < numEmergencies; ++index){
+		if (this->EmergencyListPtr->getEmergencyStatusAt(index) == Emergency::COMPLETED){
+			currentStartTime = this->EmergencyListPtr->getEmergencyStartTimeAt(index);
+			currentArrivalTime = this->EmergencyListPtr->getEmergencyDoctorArrivalTimeAt(index);
+			currentTimeOfCompletion = this->EmergencyListPtr->getEmergencyCompletionTimeAt(index);
+
+			currentWaitTime = currentArrivalTime - currentStartTime;
+			currentCompletionTime = currentTimeOfCompletion - currentStartTime;
+
+			if (this->EmergencyListPtr->getEmergencyUrgentAt(index)){
+				cumulativeUrgentWaitTime += currentWaitTime;
+				cumulativeUrgentCompletionTime += currentCompletionTime;
+				numUrgentEmergencies++;
+			}
+			else{
+				cumulativeWaitTime += currentWaitTime;
+				cumulativeCompletionTime += currentCompletionTime;
+				numNormalEmergencies++;
+			}
+		}
+	}
+
+	averageWaitTime = (double)cumulativeWaitTime / (double)numNormalEmergencies;
+	averageCompletionTime = (double)cumulativeCompletionTime / (double)numNormalEmergencies;
+	averageUrgentWaitTime = (double)cumulativeUrgentWaitTime / (double)numUrgentEmergencies;
+	averageUrgentCompletionTime = (double)cumulativeUrgentCompletionTime / (double)numUrgentEmergencies;
+
+	this->avgWaitTimes.push_back(averageWaitTime);
+	this->avgCompletionTimes.push_back(averageCompletionTime);
+	this->avgUrgentWaitTimes.push_back(averageUrgentWaitTime);
+	this->avgUrgentCompletionTimes.push_back(averageUrgentCompletionTime);
+}
+
+void FirstAidSimulation::outputKeyFigures(int run){
+	if (this->avgWaitTimes.size() != this->avgCompletionTimes.size()){
+		throw exception("Mismatched sizes on wait and completion times!");
+	}
+
+	cout << "-----------------------------------" << endl;
+	cout << "Results for run: " << run << endl;
+	cout << "Average Emergency Waiting Time is: ";
+	cout << this->avgWaitTimes[run] << " minutes" << endl;
+	cout << "Average Emergency Completion Time is: ";
+	cout << this->avgCompletionTimes[run] << " minutes" << endl;
+	cout << "Average Urgent Emergency Waiting Time is: ";
+	cout << this->avgUrgentWaitTimes[run] << " minutes" << endl;
+	cout << "Average Urgent Emergency Completion Time is: ";
+	cout << this->avgUrgentCompletionTimes[run] << " minutes" << endl;
+}
+
 void FirstAidSimulation::runSimulation(){
-	static const int NUM_OF_RUNS = 1;
+	static const int NUM_OF_RUNS = 20;
 	cout << "Running simulations..." << endl;
 	string data = "data/file.csv";
 	this->setSimulationDataFile(data);
@@ -149,7 +223,7 @@ void FirstAidSimulation::runSimulation(){
 
 	for (int i = 0; i < NUM_OF_RUNS; i++){
 		generateEmergencies();
-		QueueStrategy qs(DistrictStrategy);
+		
 		ofstream myfile;
 		myfile.open("log2.txt");
 		int district = 0;
@@ -164,14 +238,20 @@ void FirstAidSimulation::runSimulation(){
 					district = EmergencyListPtr->getEmergencyDistrictAt(index);
 					myfile << "District: " << district << endl;
 					EmergencyListPtr->setEmergencyStatusAt(index, Emergency::COMPLETED);
+					EmergencyListPtr->setEmergencyCompletionTimeAt(index, SimTime::getTime());
+					EmergencyListPtr->setEmergencyDoctorArrivalTimeAt(index, SimTime::getTime());
 					if (EmergencyListPtr->getEmergencyUrgentAt(index)) myfile << "URGENT!" << endl;
 				}
 				else myfile << "No Next Emergency!" << endl;
 				myfile << "-------------------------" << endl;
 			}
 			if (this->SimTimePtr->getTime() > SIM_DURATION) break;
+			
 		}
+		calculateKeyFigures();
+		outputKeyFigures(i);
 		myfile.close();
+		this->resetSimulation();
 	}
 
 }

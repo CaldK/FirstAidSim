@@ -36,6 +36,9 @@
     <ClInclude Include="QueueStrategy.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Doctor.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FirstAidSimulation.cpp">
@@ -57,6 +60,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="QueueStrategy.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Doctor.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

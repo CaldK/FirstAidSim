@@ -8,6 +8,7 @@
 #include "QueueStrategy.h"
 #include "EmergencyList.h"
 
+
 using namespace std;
 
 class FirstAidSimulation{
@@ -21,6 +22,9 @@ public:
 	void loadSimulationDataFromFile();
 	void parseLine(const string& currLine, int& population, vector<int>& distance) const;
 	void generateEmergencies();
+	void calculateKeyFigures();
+	void outputKeyFigures(int run);
+	QueueStrategy qs = QueueStrategy(DistrictStrategy);
 
 	static const int DEBUG_MODE = 1;
 	static int SIM_DURATION;
@@ -31,6 +35,11 @@ private:
 	SimData* SimDataPtr;
 	SimTime* SimTimePtr;
 	EmergencyList* EmergencyListPtr;
+
+	vector<double> avgWaitTimes;
+	vector<double> avgCompletionTimes;
+	vector<double> avgUrgentWaitTimes;
+	vector<double> avgUrgentCompletionTimes;
 };
 
 inline void FirstAidSimulation::setSimulationDataFile(const string& simulationDataFile){

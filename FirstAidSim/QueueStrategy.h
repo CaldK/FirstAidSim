@@ -19,6 +19,7 @@ private:
 int FIFOStrategy(int district);
 int DistrictStrategy(int district);
 
+
 inline int QueueStrategy::getNextEmergency(int district) { return strategy(district); }
 
 #endif
