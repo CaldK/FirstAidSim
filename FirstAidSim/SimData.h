@@ -14,10 +14,12 @@ public:
 	inline vector<int> getPopulationList() const;
 	inline int getDistance(int start, int end) const;
 	inline int getSimDuration() const;
+	inline double getInterarrivalTime() const;
 
 	inline void addPopulation(const int population);
 	inline void addDistance(const vector<int> distance);
 	inline void setSimDuration(const int simDuration);
+	inline void setInterarrivalTime(const double interarrivalTime);
 
 private:
 	SimData();
@@ -25,6 +27,7 @@ private:
 	int numDistricts;
 	int totalPopulation;
 	int simDuration;
+	double interarrivalTime;
 	vector<int> population;
 	vector<vector<int>> distanceMatrix;
 };
@@ -62,6 +65,10 @@ inline int SimData::getSimDuration() const{
 	return this->simDuration;
 }
 
+inline double SimData::getInterarrivalTime() const{
+	return this->interarrivalTime;
+}
+
 inline void SimData::addPopulation(const int population){
 	this->population.push_back(population);
 	this->totalPopulation += population;
@@ -74,6 +81,10 @@ inline void SimData::addDistance(const vector<int> distance){
 
 inline void SimData::setSimDuration(const int simDuration){
 	this->simDuration = simDuration;
+}
+
+inline void SimData::setInterarrivalTime(const double interarrivalTime){
+	this->interarrivalTime = interarrivalTime;
 }
 
 

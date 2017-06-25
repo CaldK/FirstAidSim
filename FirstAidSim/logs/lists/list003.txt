@@ -1,0 +1,7 @@
+-------------------------------
+Queue Emergency 0
+-------------------------------
+Time: 3628
+District: 1
+Urgent: No
+Care Duration Time: 12
