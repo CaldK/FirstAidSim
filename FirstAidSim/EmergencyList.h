@@ -16,6 +16,7 @@ public:
 	inline Emergency getEmergency(const int index);
 	inline int getEmergencyListSize() const;
 
+
 	inline int getEmergencyStartTimeAt(const int index) const;
 	inline int getEmergencyDistrictAt(const int index) const;
 	inline int getEmergencyCareDurationAt(const int index) const;
@@ -32,6 +33,7 @@ public:
 
 private:
 	EmergencyList();
+	//Singleton Instanzpointer
 	static EmergencyList* instancePtr;
 	vector<Emergency> emergencyList;
 };

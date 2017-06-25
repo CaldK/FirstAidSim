@@ -3,6 +3,8 @@
 
 #include <list>
 #include <memory>
+#include <iostream>
+#include <fstream>
 #include "SimTime.h"
 #include "EmergencyList.h"
 #include "SimData.h"
@@ -15,7 +17,7 @@ class GroupController;
 
 class Doctor {
 public:
-	Doctor();
+	Doctor(function<int(int)> f,int run);
 	virtual ~Doctor();
 	enum MoveState;
 	void doNextMove();
@@ -25,6 +27,8 @@ public:
 	inline int getCurrPosition();
 	inline int getDestPosition();
 	inline int getMoveState();
+	inline int getTimeAtStation();
+	ofstream logfile;
 	
 	enum MoveState {
 		INVALID_MOVE_STATE = -1,
@@ -38,12 +42,14 @@ public:
 private:
 	int currPosition;
 	int destPosition;
+	int activeEmergency;
+	int timeAtStation;
 	SimData* simDataPtr;
 	EmergencyList* emergencyListPtr;
 	MoveState moveState;
-	QueueStrategy qs = QueueStrategy(DistrictStrategy);
+	QueueStrategy* qs;
 	inline int genTravelTime(int index, int currPos);
-	int getFastestWay(int emergencyEventNumber, int travelTime);
+	int getFastestWay(int currPos, int destPos);
 };
 
 inline void Doctor::setMoveState(const Doctor::MoveState moveState) {
@@ -70,10 +76,12 @@ inline int Doctor::getDestPosition() {
 	return this->destPosition;
 }
 
-inline int Doctor::genTravelTime(int index, int currPos) {
-	int destinationDistrict = emergencyListPtr->getEmergencyDistrictAt(index);
-	int travelTime = SimRandom::getActualTravelTime(simDataPtr->getDistance(currPos, destinationDistrict));
-	return travelTime;
+inline int Doctor::genTravelTime(int currPos,int destPos) {
+	return SimRandom::getActualTravelTime(simDataPtr->getDistance(currPos, destPos));
+}
+
+inline int Doctor::getTimeAtStation(){
+	return this->timeAtStation;
 }
 
 

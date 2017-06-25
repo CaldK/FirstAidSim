@@ -9,7 +9,7 @@ using namespace std;
 class QueueStrategy{
 public:
 	template<typename F>
-	explicit QueueStrategy(F strategy) : strategy(move(strategy)) { }
+	QueueStrategy(F strategy) : strategy(move(strategy)) { }
 	inline int getNextEmergency(int district);
 private:
 	EmergencyList* EmergencyListPtr;

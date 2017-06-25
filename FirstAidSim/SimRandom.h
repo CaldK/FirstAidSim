@@ -33,6 +33,7 @@ public:
 	//        Bei normalen Notfällen im Intervall [10;20]
 	inline static bool isEmergencyUrgent();
 	//Return: Handelt es sich um ein lebensbedrohlicher Notfall?
+	inline static void setExpDistribution(double interarrivalTime);
 	
 
 private:
@@ -112,6 +113,9 @@ inline bool SimRandom::isEmergencyUrgent(){
 	return isUrgent;
 }
 
+inline void SimRandom::setExpDistribution(double interarrivalTime){
+	exp_distribution = exponential_distribution<double>(1 / interarrivalTime);
+}
 
 
 #endif
